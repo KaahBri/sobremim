@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <title>A²o Quadrado</title>
+    <title>Kassya Brito | Site Pessoal | A²o Quadrado </title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -24,97 +24,320 @@
     <!--inicio de Header-->
     <header class="cabecao">
       <nav class="navg">
-        <h1 class="logo">Kassya Brito</h1>
-        <section class="menu">
-          <ul>
-            <li><a href="index.html" id="home">Pagina inicial</a></li>
-            <li><a href="curiosidade.html" id="cd">Curiosidades</a></li>
+        <div class="perfil">
+          <div class="fotinha">
+            <img src="imagem/perfil/sapino.jpg" alt="Perfil" class="foto-perfil" loading="lazy">
+            <span class="status-oline" title="Oline"></span>
+          </div>
+          <h1 class="logo">Kassya Brito</h1>
+        </div>
+         <!--Para fazer o menu Hamburger-->
 
-            <li><a href="sobre.html" id="sm">Sobre</a></li>
+            <button class="btn-hamburguer" id="btn-hamburguer" onclick="toggleMenu()" aria-label="Abrir Menu">
+          <span class="linha"></span>
+          <span class="linha"></span>
+          <span class="linha"></span>
+        </button>
+
+
+         <!--Fim menu Hamburger-->
+          
+          <!--Menu/nav-->
+        <section class="menu" id="menu-nav">
+          <ul>
+            <li><a href="index.html#inicio" id="home">Pagina inicial</a></li>
+            <li><a href="#curiosidades" id="cd">Curiosidades</a></li>
+            <li><a href="sobre.html#sobre" id="sm">Sobre</a></li>
           </ul>
         </section>
       </nav>
     </header>
+
+     <!--FIM Menu/nav-->
+
     <!--Final de Header-->
+
+      <div class="overlay-menu" id="overlay-menu" onclick="toggleMenu()"></div>
 
     <!--Inicio do main(corpo)-->
     <main>
-      <section class="geral">
-        <!--Aqui é tipo um banner, to vendo ainda-->
-        <section class="abertura">
+      
+        <!--BACKGROUND DO FUNDO DA PAGINA-->
+        <section class="abertura" id="inicio">
           <img
-            src="imagem/Background.jpg"
+            src="imagem/fundos/Background2.jpg"
             alt=""
             loading="lazy"
             class="fundo-principal"
           />
-          <!--serve como divisao para coisas aleatorias-->
-          <div class="conteudo">
-            <h1>Bem-vindo(a) ao meu mundo!</h1>
-            <h2>Aqui é onde a criatividade e a loucura rolam solto</h2>
-          </div>
+
+          <!--FIM BACKGROUND DO FUNDO DA PAGINA-->
+
+          <!--INTRODUÇÃO-->
+           <div class="conteudo">
+          <h1>Bem-vindo(a) ao meu mundo!</h1>
+          <h2>Aqui é onde a criatividade e a loucura rolam solto</h2>
+          <a href="#minecraft" class="botao">Explorar</a>
+        </div>
+        </section>   <!-- FIM INTRODUÇÃO-->
+
+         <!-- INIciO DE Conteudo-->
+        <section class="terra" id="minecraft">
+          <h2>Conheça esse mundo louco.</h2>
+          <p>
+               <div class="inventario">
+          <p>
+            Neste site vou colocar de tudo um pouco do que curto, até porque não
+            faço a mínima ideia de como falar sobre mim!
+          </p>
+          <p>
+            Não me responsabilizo pela loucura, mas a diversão eu garanto... eu
+            acho.
+          </p>
+          <p>Aproveite a viagem!</p>
+        </div>
+          </p>
         </section>
-        <section class="terra">
-          <div class="into-cav">
-            <h2 class="titulo">Aviso!!</h2>
-
-            <p class="texto">
-              Olá! Se chegou até aqui, saiba que não sei o que estou fazendo
-              também. Esse pequeno site era para ser sobre mim, mas não sei
-              falar de tal coisa, então aproveite algumas coisas aleatórias que
-              eu aprecio.
-            </p>
-          </div>
-
-          <section class="me-interessa">
-            <h2 class="titulo-inte">Animais que eu achho legal</h2>
-
-            <!--Corvo feio-->
-            <div class="cont-minerios">
-              <div class="blo-minerio carvao">
-                <p class="sub">O Corvo</p>
-
-                <div class="icone corvo">
-                  <img
-                    src="imagem/mano corvo.png"
-                    alt="cabeça do corvo"
-                    loading="lazy"
-                  />
-                </div>
-
-                <p class="descricao">
-                  Uma ave genial! Usam ferramentas, planejam o futuro e sabem
-                  imitar sons e vozes humanas.
-                </p>
-              </div>
-            </div>
-            <!--Gato-->
-            <div class="cont-minerios">
-              <div class="blo-minerio carvao">
-                <p class="sub">O Gato</p>
-
-                <div class="icone gato">
-                  <img
-                    src="imagem/gato-de-bigode.jfif"
-                    alt="gato de bigode"
-                    loading="lazy"
-                  />
-                </div>
-
-                <p class="descricao">
-                  Os gatos estão entre os animais de companhia mais populares do
-                  mundo.
-                </p>
-              </div>
-            </div>
-          </section>
-        </section>
-      </section>
+      
+        <!--DIVISAO DA PAGINA-->
       <section class="pedra">
         <div class="div-pedra"></div>
       </section>
-    </main>
-    <!--FInal do main (corpo)-->
-    <footer class="rodadope">todos os direitos da reserva 2026</footer>
+      <!--DIVISAO DA PAGINA-->
+      
+      <!-- ==========================
+       MURAL DE CURIOSIDADES
+    ========================== -->
+     
+      <section class="curiosidades" id="curiosidades">
+        <br />
+        <h2>Curiosidades do Minecraft</h2>
+        <br />
+        <br />
+        <div class="cards">
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+
+            <p>
+              Minecraft é o jogo mais vendido da história, com mais de 300
+              milhões de cópias comercializadas. Seu mundo é gigantesco: ele
+              pode se estender por até 60.000 km em linha reta, uma distância
+              maior que a circunferência da Terra. Além disso, ele guarda
+              segredos fascinantes sobre seus inimigos e mecânicas.
+            </p>
+          </div>
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+            <p>
+              Creeper o monstro mais famoso do jogo foi um erro de programação.
+              Notch estava tentando criar um modelo para um porco, mas inverteu
+              as medidas de altura e largura, resultando na criatura verde e
+              explosiva que conhecemos
+            </p>
+          </div>
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+            <p>
+              Os sons assustadores que tocam aleatoriamente enquanto você
+              explora minas escuras foram feitos pelo compositor C418. Muitos
+              deles são, na verdade, gravações de piano tocadas ao contrário e
+              distorcidas.
+            </p>
+          </div>
+
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+            <p>
+              O famoso gato de estimação do criador do jogo, chamado Dinnerbone,
+              inspirou uma mecânica secreta. Se você nomear qualquer mob no jogo
+              com a tag "Dinnerbone" ou "Grumm", ele ficará de cabeça para
+              baixo.
+            </p>
+          </div>
+
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+            <p>
+              O primeiro nome do Minecraft era Cave Game. O criador, Markus
+              "Notch" Persson, utilizava este nome durante as fases iniciais de
+              desenvolvimento em maio de 2009, antes de batizar o projeto
+              oficialmente como Minecraft.
+            </p>
+          </div>
+
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+            <p>
+              Minecraft foi criado em menos de uma semana. Por mais que seja um
+              dos jogos mais vendidos de todos os tempos, Minecraft foi criado
+              às pressas — literalmente. No caso, o programador e designer
+              Markus Persson trabalhou no título entre 10 de maio de 2009 e 16
+              de maio daquele mesmo ano. A versão alfa estreou no dia seguinte,
+              no dia 17.
+            </p>
+          </div>
+
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+
+            <p>
+              O Minecraft NÃO é infinito! Existe uma barreira invisível a 30
+              milhões de blocos do spawn que impede o avanço dos jogadores e
+              começa a quebrar a física do jogo.
+            </p>
+          </div>
+
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+            <p>
+              Axolotes foram introduzidos na atualização Caves & Cliffs, ajudam
+              a matar guardiões no oceano e são praticamente invencíveis devido
+              à sua habilidade de regeneração.
+            </p>
+          </div>
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+            <p>
+              O time de desenvolvimento tinha a intenção de criar uma área que
+              seria o oposto do Nether, denominada Sky Dimension (Dimensão do
+              Céu). A ideia teria sido descartada, e seu código fonte originado
+              o End (Fim).
+            </p>
+          </div>
+          <div class="card mural-item">
+            <span class="pin">📌</span>
+            <p>
+              Em 2014, Notch postou no Twitter que queria vender o Minecraft
+              para "seguir a vida". A Microsoft atendeu ao pedido e desembolsou
+              a bagatela de US$ 2,5 bilhões pela Mojang!
+            </p>
+          </div>
+        </div>
+      </section>
+
+    <!-- ==========================
+       FINAL - MURAL DE CURIOSIDADES
+    ========================== -->
+
+
+     <!--DIVISAO DA PAGINA-->
+      <section class="pedra">
+        <div class="div-pedra"></div>
+      </section>
+      <!--DIVISAO DA PAGINA-->
+
+    
+    <!-- ==========================
+       INICIO - [DE] CATEGORIAS
+    ========================== -->
+    
+        <section class="categorias" id="categorias">
+        <!-- SEÇÃO DE coisas -->
+        <h2>Coisas que eu gosto</h2>
+        <div class="Quadrado-de-fora">
+          <div class="categoria-item">
+            <h3>Filmes & Séries</h3>
+            <p>Para maratonar até a madrugada.</p>
+          </div>
+          <div class="categoria-item">
+            <h3>Músicas</h3>
+            <p>Não garanto que são boas, mas eu gosto.</p>
+          </div>
+          <div class="categoria-item">
+            <h3>Jogos</h3>
+            <p>Não conheço muitos, mas me divirto.</p>
+          </div>
+          <div class="categoria-item">
+            <h3>Animais</h3>
+            <p>Bichinhos fofos deixam o dia melhor.</p>
+          </div>
+          <div class="categoria-item">
+            <h3>Comidas</h3>
+            <p>Porque comer bem é uma arte.</p>
+          </div>
+          <div class="categoria-item">
+            <h3>Flores & Plantas</h3>
+            <p>Um pouco de verde pra relaxar.</p>
+          </div>
+        </div>
+      </section>
+    <!-- ==========================
+       FINAL - [DE] CATEGORIAS
+    ========================== -->
+
+
+    </main> <!-- ==========================
+       FINAL - [DO] MAIN
+    ========================== -->
+    
+     <!-- ==========================
+       INICIO {DO} FOOTER - RODAPE
+    ========================== -->
+    
+    <footer class="rodadope">
+      
+       <div class="conteudo-rodape">
+        <!-- Voltar ao Topo -->
+       
+       
+
+        <!-- Redes Sociais com o botão do GitHub em Verde Vibrante -->
+        <div class="redes">
+          <p class="titulo-redes">Redes Sociais</p>
+          <div class="links-redes">
+            <a href="https://github.com/KaahBri" target="_blank">GitHub</a>
+          </div>
+        </div>
+       
+      </div>
+
+        <!-- Menu de Navegação -->
+        <nav class="menu-rodape">
+          <a href="#inicio">Início</a>
+          <a href="#categorias">Categorias</a>
+          <a href="#curiosidades">Curiosidades</a>
+          <a href="sobre.html#sobre">Sobre</a>
+        </nav>
+
+        <!-- Direitos Autorais -->
+        <p class="direitos">Todos os direitos reservados 2026 &copy;</p>
+      </div>
+    </footer><!-- ==========================
+       FIM{DO} FOOTER - RODAPE
+    ========================== -->
+
+
+
+    <!-- ==========================
+          MENU HAMBURGUER
+    ========================== -->
+  <script>
+      function toggleMenu() {
+        const menu = document.getElementById('menu-nav');
+        const btn = document.getElementById('btn-hamburguer');
+        const overlay = document.getElementById('overlay-menu');
+
+        menu.classList.toggle('aberto');
+        btn.classList.toggle('ativo');
+        overlay.classList.toggle('ativo');
+      }
+
+      // Fecha o menu ao clicar em qualquer item
+      document.querySelectorAll('#menu-nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+          const menu = document.getElementById('menu-nav');
+          const btn = document.getElementById('btn-hamburguer');
+          const overlay = document.getElementById('overlay-menu');
+          
+          menu.classList.remove('aberto');
+          btn.classList.remove('ativo');
+          overlay.classList.remove('ativo');
+        });
+      });
+    </script>
+
+     <!-- ==========================
+          MENU HAMBURGUER
+    ========================== -->
   </body>
 </html>

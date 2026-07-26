@@ -3,65 +3,291 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Inporta as paradas lá do googleFonts (vi como fazer no yotube hehe)-->
+    <title>Kassya Brito | Site Pessoal |Sobre Mim</title>
+    <!-- Importação de fontes (Nunito e Press Start 2P) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <title>Sobre</title>
 
     <link rel="stylesheet" href="sobre.css" />
   </head>
-  <body>
-    <!--inicio de Header-->
+  <body class="tema-the-end">
+    <!-- ==========================
+        CABEÇALHO / NAVEGAÇÃO
+    ========================== -->
     <header class="cabecao">
       <nav class="navg">
-        <h1 class="logo">Kassya Brito</h1>
-        <section class="menu">
-          <ul>
-            <li><a href="index.html">Pagina inicial</a></li>
-            <li><a href="curiosidade.html">Curiosidades</a></li>
+        <div class="perfil">
+          <div class="fotinha">
+            <img
+              src="imagem/perfil/enderman.jpg"
+              alt="Foto de Perfil"
+              class="foto-perfil"
+              loading="lazy"
+            />
+            <span class="status-online" title="Online no The End"></span>
+          </div>
+          <h1 class="logo">Kassya Brito</h1>
+        </div>
 
-            <li><a href="sobre.html" id="sm">Sobre</a></li>
+        <!-- BOTÃO HAMBÚRGUER (Aparece em telas menores) -->
+        <button class="btn-hamburguer" id="btn-hamburguer" onclick="toggleMenu()" aria-label="Abrir Menu">
+          <span class="linha"></span>
+          <span class="linha"></span>
+          <span class="linha"></span>
+        </button>
+
+        <!-- SEÇÃO MENU -->
+        <section class="menu" id="menu-nav">
+          <ul>
+            <li><a href="index.html#inicio" id="home">Página inicial</a></li>
+            <li><a href="index.html#curiosidades" id="cd">Curiosidades</a></li>
+            <li><a href="sobre.html" id="sm" class="ativo">Sobre</a></li>
           </ul>
         </section>
       </nav>
     </header>
-    <!--Final de Header-->
 
-    <!--Inicio do main(corpo)-->
-    <main>
-      <section class="inven">
-        <h2 class="titulo">Sobre mim</h2>
+    <!-- Overlay escuro para quando o menu mobile estiver aberto -->
+    <div class="overlay-menu" id="overlay-menu" onclick="toggleMenu()"></div>
 
-        <div class="gra">
-          <div class="de">
-            <img
-              src="https://images7.memedroid.com/images/UPLOADED415/68d360f9bd7fe.webp"
-              alt=""
-            />
-            <div class="caixa">
-              <p class="title2">Kassya</p>
-              <p class="texto">
-                Olá! Meu nome é Kassya. Sou uma pessoa alegre e gosto de jogar
-                praticamente qualquer tipo de jogo. Também sou apaixonada por
-                música, adoro assistir séries de suspense e filmes de terror.
-              </p>
-            </div>
+  
+
+
+<main class="conteudo-principal">
+
+  <!-- CAIXA ROXA GIGANTE -->
+  <section class="caixa-sobre" id="sobre">
+    <h2>Bem-vindo(a) ao Sobre Mim</h2>
+    <p>
+      Esta é a dimensão do vazio, das cidades flutuantes e dos dragões! É onde ficam as coisas mais malucas que você já viu, exatamente como a minha vida.
+    </p>
+
+    <!-- SHULKER BOX AGORA ESTÁ DENTRO DO QUADRADO ROXO -->
+    <div class="secao-shulker-trigger">
+      <h2>Quem sou eu?</h2>
+      <div class="shulker-item" onclick="abrirShulker()">
+        <div class="caixa-shulker-pixel">
+          <img src="imagem/decorativo/Shullker.png" alt="Shulker Box">
+        </div>
+        <span>Clique Aqui para Abrir</span>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <!-- MODAL INTERATIVO DA SHULKER BOX (GUI) -->
+   <section class="shulker-modal-container" id="shulkerModal">
+    <div class="shulker-gui">
+      
+      <!-- Cabeçalho do Modal -->
+      <div class="gui-header">
+        <span class="gui-title">Shulker Box</span>
+        <button class="gui-close-btn" onclick="fecharShulker()">&times;</button>
+      </div>
+
+      <!-- PARTE SUPERIOR: TEXTO SOBRE MIM -->
+      <div class="shulker-texto-container">
+        <p>
+          Sinceramente? Não tenho ideia de quem sou! A cada dia estou descobrindo algo novo. 
+          Às vezes me sinto super feliz, às vezes meio triste, uma verdadeira montanha-russa. 
+          Ainda não sei com o que quero trabalhar, mas de uma coisa tenho certeza sou apaixonada 
+          por esse meio caótico da programação. Combina certinho com os meus neurônios!
+        </p>
+      </div>
+
+      <!-- PARTE INFERIOR: INVENTÁRIO COM ITENS ENGRAÇADOS -->
+      <div class="gui-inventory-header">
+        <span class="gui-title">Inventory</span>
+      </div>
+
+      <div class="inventory-grid">
+        <!-- Linha de Slots do Inventário -->
+        
+
+        <!-- Grade de slots vazios para preencher como no jogo -->
+    
+         
+        
+        <div class="slot" data-tooltip="Meu Perfil do GitHub">
+          <a href="https://github.com/KaahBri" target="_blank" class="item-slot">
+              <img src="imagem/decorativo/Github.png" alt="GitHub" class="slot-icon">
+            </a>
+        </div><div class="slot"></div><div class="slot"></div>
+        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+        <div class="slot"></div><div class="slot"></div>  <div class="slot"></div>
+        
+      </div>
+
+    </div>
+  </section>
+  
+
+    
+    
+  
+  
+
+  <section class="secao-momentos">
+  <h2 class="titulo-galeria">Meus Melhores momentos do Minecraft</h2>
+  <p class="subtitulo-galeria">Isso fala bastante sobre mim</p>
+
+  <div class="galeria-grid">
+
+    <!-- Card 1: Grandes Construções -->
+    <div class="momento-card">
+      <div class="card-midia">
+        <img src="imagem/momentos/muralha.jpeg" alt="Torres de Pedra no Minecraft">
+      </div>
+      <div class="card-info">
+        <h3>O Castelo & Torres Fortificadas</h3>
+        <p>O apocalipse chgeou e não podemos nos render a eles, esse muro sera a nossa proteção</p>
+      </div>
+    </div>
+
+    <!-- Card 2: Fazenda Automática / Aves -->
+    <div class="momento-card">
+      <div class="card-midia">
+        <!-- Podes usar tag de vídeo para os teus clipes -->
+        <video controls poster="imagem/momentos/Prime-era.jpeg" muted loop>
+          <source src="video/galinhas-mine.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+      </div>
+      <div class="card-info">
+        <h3>Sistema Automático de Galinhas</h3>
+        <p>Aquele momento em que o sistema industrial de ovos/galinhas funcionou perfeitamente no vidro!</p>
+      </div>
+    </div>
+
+    <!-- Card 3: Caçadas com Arco -->
+    <div class="momento-card">
+      <div class="card-midia">
+        <video controls poster='imagem/momentos/Mine-bear.jpeg' muted loop>
+          <source src="video/video mine.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+      </div>
+      <div class="card-info">
+        <h3>Batalha no Rio</h3>
+        <p>A guerra dos caidos, foi uma epoca critica no overworld, eles ainda não tinham seguranças iron golems para salva-los foi uma era tenebrosa para os viventes</p>
+      </div>
+    </div>
+
+    <!-- Card 4: Momento Engraçado / Skin & Skateboard -->
+    <div class="momento-card">
+      <div class="card-midia">
+        <img src="imagem/momentos/Skate-girl.jpeg" alt="Skin com Skate no Minecraft" loading="lazy">
+      </div>
+      <div class="card-info">
+        <h3>Rolezinho de Skate</h3>
+        <p>Testando mod do skate e tirando aquela picture para nunca esquecer.</p>
+      </div>
+    </div>
+
+    <!-- Card 5: Lily-->
+    <div class="momento-card">
+      <div class="card-midia">
+        <img src="imagem/momentos/Sit-mine.jpeg" alt="Lápide no Minecraft" loading="lazy">
+      </div>
+      <div class="card-info">
+        <h3>Homenagem à Lily</h3>
+        <p>"Aqui jaz Lily, que ela descanse em paz." Morreu tão nova para um esquleto</p>
+      </div>
+    </div>
+
+    <!-- Card 6: Torre de porco na Carroça -->
+    <div class="momento-card">
+      <div class="card-midia">
+        <img src="imagem/momentos/pilha de porco.jpeg" alt="Torre de animais empilhados" loading="lazy">
+      </div>
+      <div class="card-info">
+        <h3>Torre de porcos</h3>
+        <p>Uma pilha literal de porcos numa carroça. O tipo de mod que deixa tudo divertido!</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+
+    <!-- ==========================
+        RODAPÉ
+    ========================== -->
+    <footer class="rodadope">
+      <div class="conteudo-rodape">
+        <!-- Seção de Redes Sociais -->
+        <div class="redes">
+          <p class="titulo-redes">Redes Sociais</p>
+          <div class="links-redes">
+            <a href="https://github.com/KaahBri" target="_blank">GitHub</a>
           </div>
         </div>
-     
-      </section>
-    </main>
-    <!--FInal do main (corpo)-->
-    <footer class="rodadope">todos os direitos da reserva 2026</footer>
+
+       
+
+        <!-- Menu de Navegação -->
+        <nav class="menu-rodape">
+          <a href="index.html#inicio">Início</a>
+          <a href="index.html#categorias">Categorias</a>
+          <a href="index.html#curiosidades">Curiosidades</a>
+          <a href="sobre.html#sobre">Sobre mim</a>
+        </nav>
+
+        <!-- Direitos Autorais -->
+        <p class="direitos">
+          Todos os direitos reservados 2026 &copy;
+        </p>
+      </div>
+    </footer>
+
+    <!-- LÓGICA DO MENU HAMBÚRGUER -->
+
+    
+ <script>
+      function toggleMenu() {
+        const menu = document.getElementById('menu-nav');
+        const btn = document.getElementById('btn-hamburguer');
+        const overlay = document.getElementById('overlay-menu');
+
+        menu.classList.toggle('aberto');
+        btn.classList.toggle('ativo');
+        overlay.classList.toggle('ativo');
+      }
+    </script>
+
+    
+<!-- JAVASCRIPT PARA ABRIR E FECHAR O MODAL -->
+<script>
+  function abrirShulker() {
+    document.getElementById('shulkerModal').classList.add('ativo');
+  }
+
+  function fecharShulker() {
+    document.getElementById('shulkerModal').classList.remove('ativo');
+  }
+
+  // Fechar ao clicar fora da janela da Shulker
+  window.onclick = function(event) {
+    const modal = document.getElementById('shulkerModal');
+    if (event.target === modal) {
+      fecharShulker();
+    }
+  }
+</script>
+   
   </body>
 </html>

@@ -3,275 +3,664 @@
     margin: 0;
     box-sizing: border-box;
 }
-/*peguei a dica da net, é para ajudar a font, 
-assim ela não fica bugada - tirei esse treco, não muda nada*/
 
-@media (max-width:992px){
-    .menu{
-        grid-template-columns: 1f;
-    }
-
+html{
+    scroll-behavior: smooth;
 }
-    
-@media(max-width:1024px){
-.nav menu ul li a,h1{
-
-    width: 89px;
-    font-size: 90px;
-    
-}
-
-}
-
 body{
-   
-    background-color: #161616;
-
-}
-.main{
-    padding-top: 100px;
-}
-.texto{
-    color: #f0f0f0;
-    padding: 40px;
-    position: relative;
-    z-index: 2;
+    background-color:#161616;
+    color:#f5f5f5;
+    font-family:'Nunito', sans-serif;
 }
 
-.terra{
-    position: relative;
-    background-image: url('imagem/ondasBaixas.svg'),
-    url('imagem/textura_terra.png');
-    background-repeat: repeat-x,repeat;
-    background-position: top left, top left;
-    background-size: 1000px, 128px;
-    background-color: rgba(0, 0, 0, 0.7);
-    image-rendering: pixelated;
-    background-blend-mode: normal, multiply;
+/* ==========================
+   CABEÇALHO / NAVEGAÇÃO
+========================== */
+.cabecao {
+    background-color: #208900; /* Verde principal no fundo */
     width: 100%;
-    padding: 140px 10% 80px 10%;
-}
-
-.pedra{
-  background-image: url('imagem/pedraTextura.png');
-  image-rendering: pixelated;
-  background-repeat: repeat;
-  background-size: 128px;
-  width: 100%;
-  position: relative;
-  padding: 80px 10%;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-}
-.cont-minerios{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 20px 0 60px 0;
-}
-
-.blo-minerio{
-    padding: 20px;
-    background-color: #8b8b8b;
-    border: 4px solid #373737;
-    border-top-color: #ffffff55;
-    border-left-color: #ffffff55;
-    padding: 15px;
-    text-align: center;
-    font-family: 'Press Start 2P', system-ui;
-    color: #2b2b2b
-
-}
-
-.titulo-inte{
-    font-family: 'Press Start 2P', system-ui;
-    color: #ffff55;
-    font-size: 25px;
-    text-align: center;
-    text-shadow: 2px 2x 0 #000;
-    margin-bottom: 100px;
-    margin-top: 200px;
-}
-.icone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 45px 15px;
-}
-.icone img{
-    width: 200px;
-    height: 200px;
-  
-    border-radius: 8px;
-    border: 3px solid #373737;
-}
-.sub {
-    font-family: 'system-ui', sans-serif;
-    font-size: 17px;
-    color: #2b2b2b;
-    margin-bottom: 9px;
-}
-.descricao{
-    font-family: 'Nunito', sans-serif;
-    font-size: 30px;
-    margin-top: 8px;
-    color: #2b2b2b;
-    margin-bottom: 15px;
-}
-.blo-minerio .sub{
-    font-size: 45px;
-    color: #444;
-}
-
-.into-cav{
-    
-    max-width: 2000px;
-    width: 90%;
-    margin: 200px auto 60px auto;
-    background-color: rgba(55, 41, 41, 0.85);
-    border: 4px solid #3c3c3c;
-    border-top-color:#8b8b8b;
-    border-left-color: #8b8b8b;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.into-cav .titulo{
-    font-family: 'Press Start 2P', 'system-ui';
-    color: #ffff55;
-    font-size: 20px;
-}
-
-.into-cav .texto{
-    font-family: 'sistem-ui', sans-serif;
-    font-size: 20px;
-    color:#dfdfdf;
-    line-height:1.5;
-}
-
-
-.cabecao{
-    
-    background-color: #208900;  
-    width: 100%;
-    height: 100px;
+    height: 70px;
     position: fixed;
-    top:0;
-    left:0;
-    z-index: 1000; /*fica por cima das paradas*/
-    display: flex; /*Aprendi hj*/
-   
-    align-items: center; /*Centraliza de forma vertical?, eu acho, não lembro*/
-    flex-wrap: wrap;
-    
-   
-
-}
-/*-------Navegação-------*/
-.navg{
-    
+    top: 0;
+    left: 0;
+    z-index: 9999;
     display: flex;
-    justify-content: space-between; /*espaço entre os negocios*/
-    align-items: center; /*Deixa o reflexo alinhado(os itens)*/
-    margin-left: 70px; 
-    flex-wrap: wrap;
-}
-/*Lista não ordenada dentro da navegação*/
-
-.menu ul{
-    list-style: none; /*Tira as bolinhas da lista*/
-    display: flex; /* aprendi hj e esqueci*/
-    gap: 100px;
-    flex-wrap: wrap;
-    
-}
-/*Lista não ordenada dentro da navegação com link*/
-.menu ul li a{
-
-    font-size: 17px;
-    font-family: 'Press Start 2P', system-ui;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-    margin-top: 80px;
-
-}
-/*Lista não ordenada dentro da navegação com link e com efeito no mouse*/
-.menu ul li a:hover{
-    color: #cdc8c8;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-/*Id do link da pagina inicial, para ficar marcadinho a linha*/
-#home{
- text-decoration: underline;
- text-underline-offset: 4px; /*perguntei ao mano google, serve para afastar a linha da palavra, estava precisando*/
- 
-}
-
-.abertura{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    
+    border-bottom: 4px solid #145700; /* Borda verde mais escura para dar profundidade */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/*Meu nome como logo da página*/
-.logo{
-    color:aliceblue;
+.navg {
     display: flex;
-    font-size: 40px;
     justify-content: space-between;
     align-items: center;
-    margin-right: 300px;
-    
-
+    width: 100%;
+    padding: 0 4%;
 }
 
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    color: #F9FAE6; /* Tom creme/branco suave para excelente leitura no verde */
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 2px 2px 0px #0e3d00; /* Sombra verde-escura pixelada */
+}
+
+/* ENVOLTÓRIO DA FOTO */
+.fotinha {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #55FF55; /* Verde neon para destacar a foto */
+    box-shadow: 0 0 10px rgba(85, 255, 85, 0.6);
+    image-rendering: pixelated;
+}
+
+/* INDICADOR ONLINE */
+.status-oline {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #55FF55;
+    border: 2px solid #208900; /* Borda igual ao fundo do cabeçalho */
+    border-radius: 50%;
+    box-shadow: 0 0 6px #55FF55;
+}
+
+/* ==============================================
+  MENU BURGUER
+   ============================================== */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    font-size: 12px;
+    font-family: 'Press Start 2P', system-ui;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-shadow: 2px 2px 0px #0e3d00; /* Sombra verde-escura para combinando com a logo, na minha cabeça combina*/
+}
+
+/* Estado Hover e Link Ativo */
+.menu ul li a:hover,
+.menu ul li a.ativo {
+    color: #FFFF55;
+    text-shadow: 0 0 8px #55FF55, 2px 2px 0px #0e3d00; /* Glow verde neon */
+    border-bottom: 2px solid #FFFF55;
+    padding-bottom: 4px;
+}
+
+/* Destaque para o link 'Página Inicial' */
+#home {
+    color: #FFFF55;
+    text-shadow: 0 0 8px #55FF55, 2px 2px 0px #0e3d00; /* Glow verde neon */
+    border-bottom: 2px solid #FFFF55;
+    padding-bottom: 4px;
+   
+}
+
+/* ==============================================
+   ESTILOS DO BOTÃO HAMBÚRGUER 
+   ============================================== */
+.btn-hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 32px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.btn-hamburguer .linha {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff; /* Linhas brancas */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px #55FF55; /* Brilho verde neon (Overworld) */
+}
+
+/* Animação do botão abrindo (transforma em X) */
+.btn-hamburguer.ativo .linha:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.btn-hamburguer.ativo .linha:nth-child(2) {
+    opacity: 0;
+}
+
+.btn-hamburguer.ativo .linha:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* OVERLAY ESCURO PARA O FUNDO */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(5, 20, 0, 0.8); /* Fundo escuro levemente esverdeado */
+    backdrop-filter: blur(3px);
+    z-index: 998;
+    display: none;
+}
+
+.overlay-menu.ativo {
+    display: block;
+}
+/* ==========================
+   BANNER IMAGEM INICIO 
+
+
+
+/* ==========================
+   BANNER IMAGEM INICIO
+========================== */
+.abertura{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
 
 /*A imagem de fundo - do minecraft*/
 .fundo-principal{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    object-fit:cover; /*ajuda na hora de mexer na imagem, nao deixando ela distorcer*/
+    opacity:0.2;
+    z-index:1;
+}
+
+/*Texto que vai ficar por cima da foto lá*/
+.conteudo{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    font-family:'Press Start 2P', system-ui;
+    text-shadow:2px 2px 8px rgba(0,0,0,.9);
+    transform:translateY(-40px);
+    padding:20px;
+}
+
+.conteudo h1{
+    font-size:32px;
+    margin-top: 150px;
+    margin-bottom:25px;
+    color:white;
+}
+
+.conteudo h2{
+    font-size:16px;
+    color:white;
+    font-family:'Nunito', sans-serif;
+    margin-bottom:45px;
+}
+
+.botao{
+    display:inline-block;
+    background:#58a639;
+    color:white;
+    text-decoration:none;
+    padding:15px 55px;
+    border-radius:10px;
+    transition:.3s;
+    font-weight:bold;
+    font-family:'Nunito', sans-serif;
+}
+
+.botao:hover{
+    background:#6fdc5b;
+    transform:translateY(-5px);
+}
+
+/* ==========================
+   CAMADAS MINECRAFT (TERRA / PEDRA)
+========================== */
+
+.terra {
+    position: relative;
+    width: 100%;
+    padding: 400px 10% 80px 10%;
+    background-color: #161616; /* Cor escura base para dar profundidade */
+    overflow: hidden;
+   padding-bottom: 150px;
+ 
+}  
+
+/* Textura de Terra */
+.terra::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    right: 0;
+    bottom: 0;
+    background-image: url('imagem/decorativo/textura_terra.png');
+    background-repeat: repeat;
+    background-size: 128px;
+    image-rendering: pixelated;
+    opacity: 0.1; /* Ajuste a transparência da TERRA aqui (ex: 0.2 a 0.5) */
+    z-index: 1;
+}
+
+/* Ondas (por cima da terra no topo) */
+.terra::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    
-    object-fit: cover;  /*ajuda na hora de mexer na imagem, nao deixando ela distorcer*/
+    height: 2000px; /* Altura da área onde as ondas aparecem */
+    background-image: url('imagem/decorativo/ondasBaixas.svg');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: 1000px;
+    image-rendering: pixelated;
    
-    z-index: 5; /*Brincando de camada com esse mano aqui*/
-
-    
+     
+    z-index: 2;
 }
-/*Texto que vai ficar por cima da foto lá*/
-.conteudo{
+
+
+.terra > * {
     position: relative;
-    z-index: 10; 
-    text-align: center; 
-    font-family: 'press Start 2P' , 'system-ui'; /*a fonte externa*/
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9); /*Coloca uma especie de sombra, para acompanar a letra, muito legal*/
-    transform: translateY(-60px);/*essa paradina mexe as coisas para cima e para baixo, tive que pesquisar esatva me dando dor de cabeça*/
-}
-.conteudo h1{
- font-size: 35px;
- margin-bottom: 40px;
- color: white;
-}
-.conteudo h2{
-  font-size: 20px;
-  color: white;
+    z-index: 3;
 }
 
-/*Uma gracina para mim ser feliz --- Decoração---*/
+.terra h2 {
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 90px;
+     text-shadow: 3px 3px 0px #3b301b; /* Sombra estilo Minecraft */
+    text-align: center;
+}
+
+.terra p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #f0f0f0;
+    max-width: 750px;
+    padding-bottom: x;
+    margin: 0 auto 30px auto; /* Centraliza a caixa de texto */
+    text-shadow: 2px 2px 0px #000000;
+
+}
+
+/*Caixa com o primeiro aviso de informação*/
+
+.inventario{
+   
+    background: rgba(37, 36, 36, 0.55);
+    border: 3px solid #3c3c3c;
+    border-radius: 8px;
+    padding: 25px 35px;
+    max-width: 750px;
+    margin: 20px auto 7px auto; /* Espaço até os cards */
+
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+
+
+
+.inventario p {
+  font-size: 16px;
+  line-height: 1.8; /* Dá mais espaço entre as linhas */
+  margin-bottom: 15px; /* Espaço entre cada parágrafo */
+  text-align: center;
+}
+.pedra{
+    background-image:url('imagem/decorativo/pedraTextura.png');
+    image-rendering:pixelated;
+    background-repeat:repeat;
+    background-size:128px;
+    width:100%;
+    position:relative;
+    padding:40px 10%;
+    background-color:rgba(0,0,0,0.6);
+    background-blend-mode:multiply;
+}
+
+/*Bloco decorativo dentro do divisor de pedra*/
+.div-pedra{
+    height:24px;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    border-top:2px solid rgba(255,255,255,.08);
+    border-bottom:2px solid rgba(0,0,0,.4);
+}
+
+.curiosidades{
+    padding: 80px 10%;
+  position: relative;
+ 
+  /* Gradiente escuro por cima da Caverna.jpg para manter os textos legíveis */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                    url('imagem/fundos/BackgroundCaverna.png');
+ 
+  /* Ajustes de exibição */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Dá um efeito paralaxe bem daora ao rolar a página */
+    padding:100px 10%;
+}
+
+.curiosidades h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:25px;
+    font-family:'Press Start 2P', system-ui;
+    color:#7CFC00;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:30px;
+   
+}
+
+.card{
+    background:#2d2d2d;
+    padding:30px;
+    border-radius:15px;
+    border:3px solid #444;
+    transition:.3s;
+   
+}
+.curiosidades .card{
+    position: relative;
+    background: #2d2d2d;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #444;
+    padding-top: 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.curiosidades .card .pin {
+    position: absolute ;
+    top: 15px ;
+    left: 50%;
+   
+   
+   
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#58a639;
+    box-shadow:0 0 20px rgba(88,166,57,.5);
+}
+
+
+.card h3{
+    margin-bottom:15px;
+    color:#7CFC00;
+}
+
+/* ==========================
+ As paradas que eu vou falar
+========================== */
+.categorias h2{
+      font-family: 'Press Start 2P', system-ui;
+    font-size: 28px;
+    color: #7CFC00;
+    margin-top: 150px;
+    margin-bottom: 80px;
+    text-shadow: 3px 3px 0px #1e5502; /* Sombra estilo Minecraft */
+    text-align: center;
+}
+
+.Quadrado-de-fora{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cria exatamente 3 colunas iguais */
+  gap: 20px;
+  width: 100%;
+  max-width: 900px; /* Aumentamos o limite para caberem 3 cards por linha */
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+
+.categoria-item {
+    width: 100%; /* Cada card se adapta à sua coluna */
+  background: rgba(35, 35, 35, 0.9);
+  min-height: 140px;
+  padding: 20px 15px;
+  border-radius: 10px;
+  border: 2px solid #58a639;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito ao passar o mouse */
+.categoria-item:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: #FFFF55;     /* Amarelo XP */
+    box-shadow: 0 0 15px rgba(255, 255, 85, 0.4);
+    background: rgba(45, 45, 45, 0.95);
+}
+
+.categoria-item h3 {
+    font-size: 16px;
+    color: #55FF55;            /* Verde XP brilhante */
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 0px #000;
+}
+
+.categoria-item p {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.3;
+    margin: 0;
+    text-shadow: 1px 1px 0px #000;
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+
+.rodadope {
+  background-color: #121212;
+  width: 100%;
+  background-image: linear-gradient(rgba(8, 8, 8, 0.70), rgba(11, 7, 18,0.70)),
+                      url('imagem/decorativo/bedrock.png');
+
+
+  background-repeat: repeat;
+  background-size: 128px;
+  image-rendering: pixelated;
+  padding: 40px 20px 30px 20px;
+  text-align: center;
+  border-top: 4px solid #111;
+  box-shadow: 0 -4px 15px rgba(3, 3, 3, 0.3);
+}
+
+
+
+
+.conteudo-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaço entre o título "Redes Sociais" e o link do GitHub */
+}
+
+.titulo-redes {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    color: #55FF55;
+    margin: 0;
+    text-align: center;
+}
+
+.redes a {
+    color: #e2d9b7;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px; /* Área de clique mais confortável */
+    transition: 0.2s;
+}
+
+.redes a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #55FF55;
+}
+
+.menu-rodape {
+    display: flex;
+    gap: 25px; /* Aumentou o espaço horizontal entre os links do menu */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0; /* Espaçamento extra acima/abaixo do menu */
+}
+
+.menu-rodape a {
+    color: #72ec5b;
+    text-decoration: none;
+    font-family: monospace, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+
+}
+
+.menu-rodape a:hover {
+    color: #f3eed9;
+   
+}
+
+.direitos {
+    color: #e0e1e4;
+    font-family: monospace, sans-serif;
+    font-size: 13px;
+    text-shadow: 1px 1px 0px #000;
+    margin-top: 10px; /* Empurra os direitos autorais levemente para baixo */
+}
+
+
+/* ==============================================
+   RESPONSIVO PARA CELULAR
+   ============================================== */
+@media (max-width: 900px) {
+    /* Exibe o botão hambúrguer no celular */
+    .btn-hamburguer{
+        display: flex;
+    }
+
+    /* Gaveta do Menu Deslizante */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido à direita */
+        width: 250px;
+        height: 100vh;
+        background-color: #1a6e00; /* Verde estilo Minecraft */
+        border-left: 3px solid #55FF55;
+        padding-top: 90px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Exibe o menu deslizando na tela */
+    .menu.aberto {
+        right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 25px;
+    }
+
+    .menu ul li a {
+        font-size: 12px;
+        display: block;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #208900;
+    }
+
+    .Quadrado-de-fora {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .Quadrado-de-fora {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+}
 
 
 
