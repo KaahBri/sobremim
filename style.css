@@ -608,30 +608,27 @@ body{
 /* ==============================================
    RESPONSIVO PARA CELULAR
    ============================================== */
-@media (max-width: 850px) {
-    /* Exibe o botão hambúrguer no celular */
-    .btn-hamburguer{
-        display: flex;
+@media(max-width: 850px) {
+    .btn-hamburguer {
+        display: flex; /* Exibe o botão hambúrguer no celular */
     }
 
-    /* Gaveta do Menu Deslizante */
     .menu {
         position: fixed;
         top: 0;
-        right: -100%; /* Escondido à direita */
+        right: -100%; /* Inicia fora da tela */
         width: 250px;
         height: 100vh;
-        background-color: #1a6e00; /* Verde estilo Minecraft */
-        border-left: 3px solid #55FF55;
+        background-color: #150d22;
+        border-left: 3px solid #8b5cf6;
         padding-top: 90px;
         transition: right 0.3s ease;
         z-index: 999;
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.8);
     }
 
-    /* Exibe o menu deslizando na tela */
     .menu.aberto {
-        right: 0;
+        right: 0; /* Desliza para dentro da tela */
     }
 
     .menu ul {
@@ -641,14 +638,14 @@ body{
     }
 
     .menu ul li a {
-        font-size: 12px;
+        font-size: 14px;
         display: block;
         padding-bottom: 10px;
-        border-bottom: 1px dashed #208900;
+        border-bottom: 1px dashed #3b0764;
     }
 
-    .Quadrado-de-fora {
-        grid-template-columns: repeat(2, 1fr);
+    .logo {
+        font-size: 16px;
     }
 }
 
