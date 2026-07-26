@@ -608,7 +608,7 @@ body{
 /* ==============================================
    RESPONSIVO PARA CELULAR
    ============================================== */
-@media (max-width: 900px) {
+@media (max-width: 850px) {
     /* Exibe o botão hambúrguer no celular */
     .btn-hamburguer{
         display: flex;
