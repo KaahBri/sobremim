@@ -132,7 +132,7 @@ body.tema-the-end {
 }
 
 
-/* ----- botão hambúrguer (celular) ----- */
+/* ----- botão hambúrguer (mobile) ----- */
 
 .btn-hamburguer {
     display: none;
@@ -638,5 +638,91 @@ body.tema-the-end {
 
     .logo {
         font-size: 16px;
+    }
+
+    .conteudo-principal {
+        padding: 30px 5%;
+    }
+
+    .caixa-sobre {
+        padding: 20px;
+    }
+
+    .caixa-sobre h2 {
+        font-size: 16px;
+    }
+
+    .categorias h2 {
+        font-size: 18px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .Quadrado-de-fora {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 80px;
+    }
+}
+
+
+/* ==========================================================
+   7. RESPONSIVO (ATÉ 600px — CELULAR)
+   ========================================================== */
+
+@media (max-width: 600px) {
+    .Quadrado-de-fora {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .categoria-item {
+        min-height: 120px;
+        padding: 18px 14px;
+    }
+
+    .secao-shulker-trigger h2 {
+        font-size: 16px;
+    }
+
+    .shulker-item {
+        max-width: 100%;
+        padding: 14px 18px;
+    }
+
+    .shulker-gui {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .gui-title {
+        font-size: 11px;
+    }
+
+    .shulker-texto-container {
+        padding: 10px;
+    }
+
+    .shulker-texto-container p {
+        font-size: 14px;
+    }
+
+    .inventory-grid {
+        gap: 3px;
+    }
+
+    .slot[data-tooltip]:hover::after {
+        font-size: 13px;
+        padding: 4px 8px;
+        white-space: normal;
+        max-width: 150px;
+        text-align: center;
+    }
+
+    .rodadope {
+        padding: 20px 15px;
+    }
+
+    .menu-rodape {
+        gap: 12px;
     }
 }
