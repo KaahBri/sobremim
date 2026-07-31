@@ -328,32 +328,143 @@ body{
 
 }
 
-/*Caixa com o primeiro aviso de informação*/
-
-.inventario{
-   
-    background: rgba(37, 36, 36, 0.55);
-    border: 3px solid #3c3c3c;
-    border-radius: 8px;
-    padding: 25px 35px;
-    max-width: 750px;
-    margin: 20px auto 7px auto; /* Espaço até os cards */
-
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 4px 15px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
+.sobre-minecraft {
+  width: 100%;
+  max-width: 900px; /* Reduzido levemente para o card não ficar esticado demais */
+  margin: 0 auto;
+  padding: 40px 20px;
 }
+
+.sobre-minecraft h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.8rem;
+  color: #ffffff;
+
+  
+  /* Sombra 3D marcante no estilo dos menus do jogo */
+  text-shadow: 
+    3px 3px 0px #000000,
+    -1px -1px 0px #000000,  
+     1px -1px 0px #000000,
+    -1px  1px 0px #000000,
+     1px  1px 0px #000000;
+  
+  letter-spacing: 2px;
+  margin-bottom: 100px;
+}
+
+
+
+/* Card Principal */
+.card-sobre {
+  background: rgba(35, 35, 35, 0.9);
+  border: 2px solid #58a639;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+  /* Ativa o Flexbox para colocar lado a lado e centralizar tudo */
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+  gap: 30px;
+  transition: all 0.3s ease;
+}
+
+.card-sobre:hover {
+  border-color: #74d84c;
+  box-shadow: 0 8px 20px rgba(88, 166, 57, 0.3);
+}
+
+/* Imagem e efeito de flutuação */
+.imagem-sobre {
+  flex-shrink: 0; /* Impede que a imagem encolha */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-sobre img {
+  width: 110px;
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.6));
+  animation: flutuar 3s ease-in-out infinite; /* Efeito suave de flutuação estilo item de jogo */
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Texto interno */
+.texto-sobre {
+  flex: 1;
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.texto-sobre p {
+  margin-bottom: 12px;
+}
+
+.texto-sobre p:last-child {
+  margin-bottom: 0;
+}
+
+.texto-sobre strong {
+  color: #58a639;
+}
+
+/* Ajuste Responsivo para Celular */
+@media (max-width: 600px) {
+  .card-sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .texto-sobre {
+    text-align: center;
+  }
+  
+  .imagem-sobre img {
+    width: 80px;
+  }
+}
+
+/*MODOS DE JOGO*/
 
 .modo-de-jogo{
   
   /*Formatação dos textos*/
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Cria exatamente 3 colunas iguais */
-  gap: 90px;
+  gap: 30px;
   width: 100%;
   max-width: 1200px; 
+    
+  padding-bottom: 150px;
   margin: 0 auto;
-  margin-bottom: 45px;
   align-items: center;
+  padding-top: 35px ;
+}
+
+.modo-jogo h2{
+
+     font-family: 'Press Start 2P', system-ui;
+    font-size: 28px;
+    color: #ffffff;
+    padding-top: 130px;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 0px #3b301b; /* Sombra estilo Minecraft */
+    text-align: center;
+
 }
 
 .modo{
@@ -363,28 +474,87 @@ body{
   padding: 20px 15px;
   border-radius: 10px;
   border: 2px solid #58a639;
- 
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
- margin-left: 270px;
+ 
   transition: all 0.3s ease;
-  cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.modo p {
-
+.modo:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: #FFFF55;     /* Amarelo XP */
+    box-shadow: 0 0 15px rgba(255, 255, 85, 0.4);
+    background: rgba(45, 45, 45, 0.95);
 }
 
-.inventario p {
-  font-size: 16px;
-  line-height: 1.8; /* Dá mais espaço entre as linhas */
-  margin-bottom: 15px; /* Espaço entre cada parágrafo */
+/* Quadradinho do Inventário (Slot) */
+.slot-item {
+  width: 64px;
+  height: 64px;
+  background-color: #8b8b8b; /* Fundo cinza original do Minecraft */
+  
+  /* Bordas duplas para criar o efeito 3D escavado igual ao do jogo */
+  border: 4px solid;
+  border-color: #373737 #ffffff #ffffff #373737;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin-bottom: 15px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* Ajuste do ícone para caber certinho no slot */
+.icone-modo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  image-rendering: pixelated; /* Mantém os pixels definidos */
+  filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.5));
+}
+
+.icone-modo.icone-aumentar {
+  width: 64px;  /* Ou um valor maior como 56px se preferir */
+  height: 64px;
+}
+
+.modo-jogo h2{
   text-align: center;
+  margin-bottom: 30px;
 }
+
+.modo:hover {
+  transform: translateY(-5px);
+  border-color: #74d84c;
+}
+
+/* Efeito ao passar o mouse: o slot fica dourado/iluminado! */
+.modo:hover .slot-item {
+  border-color: #fce000 #f7b100 #f7b100 #fce000; /* Borda dourada de seleção */
+  background-color: #a0a0a0;
+  box-shadow: 0 0 10px rgba(252, 224, 0, 0.5);
+}
+
+.modo h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.modo p {
+  color: #ddd;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/*MODOS DE JOGO*/
 .pedra{
     background-image:url('imagem/decorativo/pedraTextura.png');
     image-rendering:pixelated;
@@ -494,7 +664,7 @@ body{
 ========================================== */
 
 .secao-momentos {
-  max-width: 1100px;
+  max-width: 1200px; /* Alinhado com a largura max das outras seções */
   margin: 60px auto 40px auto;
   padding: 0 20px;
 }
@@ -502,7 +672,7 @@ body{
 .titulo-galeria {
   font-family: 'Press Start 2P', cursive;
   font-size: 20px;
-  color: #a855f7;
+  color: #fff; /* Título principal branco para se destacar no fundo escuro */
   text-align: center;
   text-shadow: 2px 2px 0px #000;
   margin-bottom: 10px;
@@ -510,7 +680,7 @@ body{
 
 .subtitulo-galeria {
   text-align: center;
-  color: #e2d9b7;
+  color: #ddd;
   font-size: 16px;
   margin-bottom: 35px;
 }
@@ -524,29 +694,29 @@ body{
 
 /* Card Individual Estilo Minecraft */
 .momento-card {
-  background-color: #1a0f2e;
-  border: 3px solid #7e22ce;
-  border-radius: 8px;
+  background: rgba(35, 35, 35, 0.9); /* Fundo igual ao dos Modos e Sobre */
+  border: 2px solid #58a639; /* Borda verde característica */
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .momento-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
-  border-color: #a855f7;
+  transform: translateY(-5px);
+  border-color: #74d84c; /* Verde mais vivo ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(88, 166, 57, 0.3);
 }
 
 /* Mídia do Card (Foto ou Vídeo) */
 .card-midia {
   width: 100%;
   height: 200px;
-  background-color: #0b0712;
+  background-color: #1a1a1a;
   overflow: hidden;
-  border-bottom: 3px solid #581c87;
+  border-bottom: 2px solid #58a639; /* Linha de divisão verde */
 }
 
 .card-midia img, 
@@ -568,14 +738,14 @@ body{
 .card-info h3 {
   font-family: 'Press Start 2P', cursive;
   font-size: 13px;
-  color: #f3eed9;
+  color: #fff;
   margin-top: 0;
   margin-bottom: 12px;
   line-height: 1.4;
 }
 
 .card-info p {
-  color: #c4b5fd;
+  color: #ddd; /* Texto claro para boa leitura */
   font-size: 14px;
   line-height: 1.5;
   margin: 0;

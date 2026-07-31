@@ -1,6 +1,6 @@
-/* ==========================
-   RESET & BASE TEMA THE END
-========================== */
+/* ==========================================================
+   1. RESET & BASE
+   ========================================================== */
 
 * {
     margin: 0;
@@ -11,29 +11,31 @@
 html {
     scroll-behavior: smooth;
 }
+
 body.tema-the-end {
-    background-image: linear-gradient(rgba(11, 7, 18, 0.75), rgba(11, 7, 18, 0.75)), 
-                      url('imagem/fundos/End.jpg');
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-image: linear-gradient(rgba(11, 7, 18, 0.75), rgba(11, 7, 18, 0.75)),
+                       url('imagem/fundos/End.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #0b0712;
-    
+
     color: #e2d9b7;
     font-family: 'Nunito', sans-serif;
-    
-    /* ADICIONE ESTAS LINHAS ABAIXO */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
-/* ==========================
-   CABEÇALHO / NAVEGAÇÃO
-========================== */
+
+
+/* ==========================================================
+   2. CABEÇALHO / NAVEGAÇÃO
+   ========================================================== */
 
 .cabecao {
-    background-color: #150d22; /* Roxo escuro da dimensão */
+    background-color: #150d22;
     width: 100%;
     height: 70px;
     position: fixed;
@@ -69,7 +71,6 @@ body.tema-the-end {
     text-shadow: 2px 2px 0px #5b21b6;
 }
 
-/* ENVOLTÓRIO DA FOTO */
 .fotinha {
     position: relative;
     width: 50px;
@@ -87,7 +88,7 @@ body.tema-the-end {
     image-rendering: pixelated;
 }
 
-/* INDICADOR ROXO DE STATUS */
+/* bolinha de status no canto da foto */
 .status-online {
     position: absolute;
     bottom: 0;
@@ -100,9 +101,8 @@ body.tema-the-end {
     box-shadow: 0 0 5px #c084fc;
 }
 
-/* ==========================
-   MENU DE NAVEGAÇÃO (DESKTOP)
-========================== */
+
+/* ----- menu (desktop) ----- */
 
 .menu ul {
     list-style: none;
@@ -131,9 +131,8 @@ body.tema-the-end {
     color: #c084fc;
 }
 
-/* ==========================
-   BOTÃO MENU HAMBÚRGUER
-========================== */
+
+/* ----- botão hambúrguer (celular) ----- */
 
 .btn-hamburguer {
     display: none;
@@ -157,7 +156,7 @@ body.tema-the-end {
     box-shadow: 0 0 5px #a855f7;
 }
 
-/* Animação do botão abrindo */
+/* animação do X ao abrir */
 .btn-hamburguer.ativo .linha:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
 }
@@ -171,6 +170,7 @@ body.tema-the-end {
 }
 
 .overlay-menu {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -179,16 +179,16 @@ body.tema-the-end {
     background-color: rgba(11, 7, 18, 0.8);
     backdrop-filter: blur(3px);
     z-index: 998;
-    display: none;
 }
 
 .overlay-menu.ativo {
     display: block;
 }
 
-/* ==========================
-   CONTEÚDO PRINCIPAL (MAIN)
-========================== */
+
+/* ==========================================================
+   3. CONTEÚDO PRINCIPAL
+   ========================================================== */
 
 .conteudo-principal {
     margin-top: 100px;
@@ -197,17 +197,16 @@ body.tema-the-end {
 }
 
 .caixa-sobre {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+
     background: rgba(21, 13, 34, 0.85);
     border: 2px solid #5b21b6;
     border-radius: 12px;
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
     backdrop-filter: blur(4px);
-    
-    /* Centralização dos textos do topo */
-    text-align: center;
 }
 
 .caixa-sobre h2 {
@@ -215,8 +214,8 @@ body.tema-the-end {
     font-size: 20px;
     color: #f3eed9;
     margin-bottom: 20px;
-    border-bottom: 2px solid #a855f7;
     padding-bottom: 10px;
+    border-bottom: 2px solid #a855f7;
     text-shadow: 2px 2px 0px #000;
 }
 
@@ -228,323 +227,318 @@ body.tema-the-end {
 }
 
 
+/* ----- cards de categorias ----- */
 
-/* ==========================================
-   INTERAÇÃO E GUI DA SHULKER BOX
-========================================== */
-
-/* Gatilho na página */
-/* ESTILOS ESPECÍFICOS DA SEÇÃO DO SHULKER (DENTRO DA CAIXA ROXA) */
-.secao-shulker-trigger {
+.categorias h2 {
+    font-family: 'Press Start 2P', system-ui, sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 100px;
+    margin-bottom: 50px;
     text-align: center;
-    margin-top: 30px;
-    padding-top: 25px;
-    border-top: 2px dashed #5b21b6; /* Linha pontilhada separando a intro da shulker */
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-shadow: 3px 3px 0px #3b1443;
 }
 
-/* DIMINUI A LINHA DO "QUEM SOU EU?" */
-.secao-shulker-trigger h2 {
-    display: inline-block; /* Faz a borda ter o tamanho exato do texto */
-    border-bottom: 2px solid #a855f7; /* Linha roxa fininha sob o texto */
-    padding-bottom: 8px;
-    margin-bottom: 25px; /* CRIA O ESPAÇAMENTO ENTRE O TÍTULO E O BOTÃO */
-    
-    /* Previne que herde larguras indesejadas */
-    width: auto;
-}
-
-/* ESPAÇAMENTO E ENCAIXE DO BOTÃO DA SHULKER */
-.shulker-item {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    background-color: rgba(154, 91, 159, 0.2);
-    border: 3px solid #9a5b9f;
-    border-radius: 10px;
-    padding: 16px 28px;
-    max-width: 260px;
+.Quadrado-de-fora {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(154, 91, 159, 0.4);
-}
-
-
-/* =========================================================================
-Categorias - Tirei da Página do HTML - Coloquei no Sobre faz mais sentido 
-============================================================================ */
-.categorias h2{
-      font-family: 'Press Start 2P', system-ui;
-    font-size: 28px;
-    color: #7CFC00;
-    margin-top: 150px;
-    margin-bottom: 80px;
-    text-shadow: 3px 3px 0px #1e5502; /* Sombra estilo Minecraft */
-    text-align: center;
-}
-
-.Quadrado-de-fora{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Cria exatamente 3 colunas iguais */
-  gap: 20px;
-  width: 100%;
-  max-width: 1100px; /* Aumentamos o limite para caberem 3 cards por linha */
-  margin: 0 auto;
-  margin-bottom: 150px;
+    margin-bottom: 150px;
 }
 
 .categoria-item {
-    width: 100%; /* Cada card se adapta à sua coluna */
-  background: rgba(35, 35, 35, 0.9);
-  min-height: 140px;
-  padding: 20px 15px;
-  border-radius: 10px;
-  border: 2px solid #58a639;
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
- 
-  transition: all 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    min-height: 150px;
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: rgba(25, 18, 30, 0.85);
+    border: 2px solid #a855f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* Efeito ao passar o mouse */
 .categoria-item:hover {
-    transform: translateY(-6px) scale(1.03);
-    border-color: #FFFF55;     /* Amarelo XP */
-    box-shadow: 0 0 15px rgba(255, 255, 85, 0.4);
-    background: rgba(45, 45, 45, 0.95);
+    transform: translateY(-5px);
+    border-color: #f472b6;
+    box-shadow: 0 0 15px rgba(244, 114, 182, 0.4);
+    background: rgba(40, 25, 50, 0.95);
 }
 
 .categoria-item h3 {
-    font-size: 16px;
-    color: #55FF55;            /* Verde XP brilhante */
-    margin-bottom: 8px;
+    font-family: 'Press Start 2P', system-ui, sans-serif;
+    font-size: 13px;
+    color: #e879f9;
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.4;
     text-shadow: 1px 1px 0px #000;
 }
 
 .categoria-item p {
-    font-size: 13px;
-    color: #ccc;
-    line-height: 1.3;
+    font-size: 14px;
+    color: #e2e8f0;
+    line-height: 1.5;
     margin: 0;
     text-shadow: 1px 1px 0px #000;
 }
 
 
-.shulker-item img {
-    width: 36px;                        /* Tamanho reduzido para a imagem */
-    height: auto;
+/* ==========================================================
+   4. SHULKER BOX (GATILHO + MODAL ESTILO GUI MINECRAFT)
+   ========================================================== */
+
+.secao-shulker-trigger {
+    margin-top: 30px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 2px dashed #5b21b6;
+}
+
+.secao-shulker-trigger h2 {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 25px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #a855f7;
+}
+
+.shulker-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 16px 28px;
+
+    background-color: rgba(154, 91, 159, 0.2);
+    border: 3px solid #9a5b9f;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(154, 91, 159, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .shulker-item:hover {
-  transform: scale(1.05);
-  background-color: rgba(154, 91, 159, 0.4);
-  box-shadow: 0 0 25px rgba(226, 217, 183, 0.6);
+    transform: scale(1.05);
+    background-color: rgba(154, 91, 159, 0.4);
+    box-shadow: 0 0 25px rgba(226, 217, 183, 0.6);
 }
 
-.caixa-shulker-pixel {
-  font-size: 16px;
-  animation: flutuar 2s infinite ease-in-out;
+.shulker-item img {
+    width: 36px;
+    height: auto;
 }
 
 .shulker-item span {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 10px;
-  
-  color: #e2d9b7;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    color: #e2d9b7;
+}
+
+.caixa-shulker-pixel {
+    font-size: 16px;
+    animation: flutuar 2s infinite ease-in-out;
 }
 
 @keyframes flutuar {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
-/* CONTAINER DO MODAL POP-UP */
+
+/* ----- modal (pop-up) ----- */
+
 .shulker-modal-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
-  z-index: 2000;
-  justify-content: center;
-  align-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
 }
 
 .shulker-modal-container.ativo {
-  display: flex;
+    display: flex;
 }
 
-/* JANELA ESTILO GUI MINECRAFT */
 .shulker-gui {
-  background-color: #8c5d8d; /* Cor Magenta/Roxa clássica da Shulker */
-  border: 4px solid #573358;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 480px;
-  padding: 16px;
-  box-shadow: inset -4px -4px 0px #3f223f, inset 4px 4px 0px #ba8dba, 0 10px 30px rgba(0,0,0,0.8);
-  font-family: 'VT323', monospace, sans-serif;
-  color: #373737;
-  position: relative;
+    width: 90%;
+    max-width: 480px;
+    padding: 16px;
+    position: relative;
+
+    background-color: #8c5d8d;
+    border: 4px solid #573358;
+    border-radius: 8px;
+    box-shadow: inset -4px -4px 0px #3f223f,
+                inset 4px 4px 0px #ba8dba,
+                0 10px 30px rgba(0, 0, 0, 0.8);
+    font-family: 'VT323', monospace, sans-serif;
+    color: #373737;
 }
 
-/* CABEÇALHOS DA GUI */
-.gui-header, .gui-inventory-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
+.gui-header,
+.gui-inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
 }
 
 .gui-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 13px;
-  color: #2e1d2e;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+    color: #2e1d2e;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
 }
 
 .gui-close-btn {
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-  color: #2e1d2e;
-  cursor: pointer;
-  line-height: 1;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e1d2e;
+    cursor: pointer;
+    line-height: 1;
 }
 
 .gui-close-btn:hover {
-  color: #ff5555;
+    color: #ff5555;
 }
 
-/* AREA DE TEXTO DENTRO DA SHULKER */
 .shulker-texto-container {
-  background-color: #6d426e;
-  border: 3px solid #3f223f;
-  border-radius: 4px;
-  padding: 12px;
-  margin-bottom: 15px;
-  box-shadow: inset 2px 2px 0px #2e1d2e, inset -2px -2px 0px #a16da2;
+    margin-bottom: 15px;
+    padding: 12px;
+
+    background-color: #6d426e;
+    border: 3px solid #3f223f;
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 0px #2e1d2e,
+                inset -2px -2px 0px #a16da2;
 }
 
 .shulker-texto-container p {
-  color: #f3eed9;
-  font-size: 15px;
-  line-height: 1.5;
-  font-family: 'Nunito', sans-serif;
-  margin: 0;
+    color: #f3eed9;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
 }
 
-/* GRADE DO INVENTÁRIO (SLOTS 9x4) */
+
+/* ----- grade de inventário (9x4) ----- */
+
 .inventory-grid {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 4px;
-  background-color: #8c5d8d;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 4px;
+    background-color: #8c5d8d;
 }
 
 .slot {
-width: 100%;
-  aspect-ratio: 1;
-  background-color: #573358;
-  border: 2px solid #3f223f;
-  box-shadow: inset -2px -2px 0px #8c5d8d, inset 2px 2px 0px #2e1d2e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  cursor: pointer;
-  position: relative;
-  user-select: none;
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+
+    background-color: #573358;
+    border: 2px solid #3f223f;
+    box-shadow: inset -2px -2px 0px #8c5d8d,
+                inset 2px 2px 0px #2e1d2e;
 }
 
-
-/* Estilo do link e do item no slot */
-.slot .item-slot {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-/* Tamanho da imagem dentro do slot */
-.slot-icon {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  image-rendering: pixelated; /* Mantém a estética pixel-art se a imagem for menor */
-}
-
-/* Efeito ao passar o mouse por cima do item */
-.slot .item-slot:hover {
-  transform: scale(1.15); /* Dá um leve zoom no ícone */
-  filter: drop-shadow(0 0 5px #a855f7); /* Brilho roxo ao focar */
-}
 .slot:hover {
-  background-color: #6d426e;
+    background-color: #6d426e;
 }
 
-/* TOOLTIP AO PASSAR O MOUSE (ESTILO MINECRAFT) */
+.slot .item-slot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.slot .item-slot:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 5px #a855f7);
+}
+
+.slot-icon {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+/* tooltip estilo Minecraft */
 .slot[data-tooltip]:hover::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #100010;
-  color: #ffff55; /* Amarelo clássico de item do Minecraft */
-  border: 2px solid #2b005b;
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-family: 'VT323', monospace;
-  font-size: 16px;
-  white-space: nowrap;
-  z-index: 3000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.9);
-  pointer-events: none;
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    pointer-events: none;
+
+    background-color: #100010;
+    color: #ffff55;
+    border: 2px solid #2b005b;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    z-index: 3000;
 }
 
 
-
-/* ==========================
-   RODAPÉ (TEXTURA END STONE)
-========================== */
+/* ==========================================================
+   5. RODAPÉ
+   ========================================================== */
 
 .rodadope {
+    width: 100%;
+    padding: 30px 20px;
+    margin-top: auto;
+    text-align: center;
+
     background-color: #150d22;
-    background-image: linear-gradient(rgba(11, 7, 18, 0.85), rgba(11, 7, 18, 0.85)), 
-                      url('imagem/decorativo/end_stone.png');
+    background-image: linear-gradient(rgba(11, 7, 18, 0.85), rgba(11, 7, 18, 0.85)),
+                       url('imagem/decorativo/end_stone.png');
     background-repeat: repeat;
     background-size: 64px;
     image-rendering: pixelated;
-    
-    width: 100%;
-    padding: 30px 20px; /* Padding ajustado para o conteúdo ficar compacto */
-    margin-top: auto;   /* Cola o rodapé no fundo apenas se a tela for maior que o conteúdo */
-    
-    text-align: center;
     border-top: 4px solid #8b5cf6;
     box-shadow: 0 -4px 15px rgba(139, 92, 246, 0.3);
 }
-
-
 
 .conteudo-rodape {
     display: flex;
@@ -573,7 +567,6 @@ width: 100%;
     text-shadow: 0 0 8px #a855f7;
 }
 
-
 .menu-rodape {
     display: flex;
     gap: 20px;
@@ -592,7 +585,6 @@ width: 100%;
 
 .menu-rodape a:hover {
     color: #f3eed9;
-    
 }
 
 .direitos {
@@ -603,33 +595,32 @@ width: 100%;
 }
 
 
+/* ==========================================================
+   6. RESPONSIVO (ATÉ 850px)
+   ========================================================== */
 
-
-/* ==========================
-   RESPONSIVO / CELULAR
-========================== */
-
-@media(max-width: 850px) {
+@media (max-width: 850px) {
     .btn-hamburguer {
-        display: flex; /* Exibe o botão hambúrguer no celular */
+        display: flex;
     }
 
     .menu {
         position: fixed;
         top: 0;
-        right: -100%; /* Inicia fora da tela */
+        right: -100%;
         width: 250px;
         height: 100vh;
+        padding-top: 90px;
+        z-index: 999;
+
         background-color: #150d22;
         border-left: 3px solid #8b5cf6;
-        padding-top: 90px;
-        transition: right 0.3s ease;
-        z-index: 999;
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.8);
+        transition: right 0.3s ease;
     }
 
     .menu.aberto {
-        right: 0; /* Desliza para dentro da tela */
+        right: 0;
     }
 
     .menu ul {

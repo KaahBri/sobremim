@@ -92,59 +92,90 @@
 
       <!-- INIciO DE Conteudo-->
       <section class="terra" id="minecraft">
-        <h2>O que é o Minecraft ?</h2>
+        <section class="sobre-minecraft">
+        
+  <h2>O que é o Minecraft ?</h2>
 
-        <div class="inventario">
-          <p>
-            É um jogo do tipo sandbox (caixa de areia) onde tudo é feito de
-            blocos tridimensionais, lembrando blocos de montar. Os jogadores
-            exploram um mundo gerado aleatoriamente e quase infinito, mineram
-            recursos (como madeira e pedra) e combinam esses materiais para
-            construir o que quiserem e sobreviver.
-          </p>
-        </div>
+  <div class="card-sobre">
+    <div class="texto-sobre">
+      <p>
+  O <strong>Minecraft</strong> é um fenômeno global do gênero <em>sandbox</em> onde o mapa é composto por blocos pixelados interativos. Cada bloco representa um material do mundo real ou fantasioso como terra, pedra, madeira, ferro e redstone.
+</p>
+<p>
+  A proposta do jogo combina <strong>exploração, sobrevivência e criatividade sem limites</strong>: você pode desde erguer uma simples cabana de madeira para se proteger na primeira noite, até projetar circuitos automatizados e recriar cidades inteiras bloco por bloco.
+</p>
+    </div>
+
+    <div class="imagem-sobre">
+      <img src="imagem/icones/Minecraft-JAVA.png" alt="Bloco de Grama do Minecraft">
+    </div>
+  </div>
+</section>
+
+
+      </section>
+
+      
+           <!--DIVISAO DA PAGINA-->
+      <section class="pedra">
+        <div class="div-pedra"></div>
+      </section>
+      <!--DIVISAO DA PAGINA-->
         <section class="modo-jogo">
         <h2>Modos de Jogo</h2>
          
         <div class="modo-de-jogo">
-         <div class="modo">
-          
+         
+          <div class="modo">
+           <div class="slot-item">
+           <img src="imagem/icones/espada-de-ferro.webp" alt="Olho do Ender" class="icone-modo">
+           </div>
           <h4>Modo Sobrevivência (Survival)</h4>
           <br>
-          <p>É o principal formato do Minecraft. Nele, você enfrenta perigos reais, pois precisa coletar recursos, gerenciar sua barra de fome, construir abrigos e proteger-se de monstros para evitar a morte e a perda de seus itens</p>
-
+          <p>É a experiência clássica do jogo. Você precisa minerar recursos, cultivar alimentos e construir abrigos enquanto gerencia sua barra de vida e combate criaturas hostis que aparecem durante a noite.</p>
+        
           </div>
-        </div>
+        
         
        
 
-        <div class="modo-de-jogo">
+  
           <div class="modo">
+           <div class="slot-item">
+           <img src="imagem/icones/bloco-de-terra.png" alt="Olho do Ender" class="icone-modo">
+           </div>
           <h4>Modo Criativo (Criative)</h4>
           <br>
-          <p>É um ambiente de jogo no Minecraft onde você tem recursos infinitos e invencibilidade. Ele remove barras de fome e vida, permitindo voar livremente e destruir blocos instantaneamente para construir e testar construções sem limitações.</p>
+          <p>É o espaço voltado para a construção livre. Você possui acesso a um inventário com todos os blocos do jogo, além de invencibilidade total e a habilidade de voar para criar sem nenhuma limitação.</p>
+        
           </div>
-        </div>
+     
           
-        <div class="modo-de-jogo">
+    
           <div class="modo">
+            <div class="slot-item">
+           <img src="imagem/icones/MAPA.png" alt="Olho do Ender" class="icone-modo icone-aumentar">
+           </div>
           <h4>Modo Extremo (Hardcore)</h4>
            <br>
-          <p> É a variante mais desafiadora do Minecraft. Ele possui as mesmas mecânicas do modo sobrevivência, mas com duas regras brutais: a dificuldade é travada no nível "Difícil" e você tem apenas uma vida. Se você morrer, o mundo é perdido permanentemente e você vira apenas um espectador.</p>
-         </div>
-        </div>
-
-        <div class="modo-de-jogo">
-          <div class="modo">
+          <p> É a versão mais desafiadora e punitiva do jogo. Mantém a dinâmica do modo sobrevivência, porém com a dificuldade travada no nível mais alto e com morte permanente: se você morrer, perde o mundo para sempre.</p>
           
+         </div>
+   
+
+       
+          <div class="modo">
+            <div class="slot-item">
+           <img src="imagem/icones/Olho-de-ender.webp" alt="Olho do Ender" class="icone-modo">
+           </div>
             <h4>Modo Espectador (Spectator)</h4>
           <br>
-          <p> É uma ferramenta que permite aos jogadores sobrevoar o mundo, atravessar blocos e observar o ambiente de forma totalmente invisível e sem interagir com ele.</p>
-          </div>
+          <p> É uma ferramenta de exploração e câmeras. Permite voar sem restrições, atravessar blocos sólidos e observar cavernas, estruturas e outros jogadores de forma totalmente invisível e sem poder interagir.</p>
+          
+        </div>
+        
         </div>
         </section>
-
-      </section>
 
       <!--DIVISAO DA PAGINA-->
       <section class="pedra">
@@ -271,11 +302,7 @@
         <div class="div-pedra"></div>
       </section>
       <!--DIVISAO DA PAGINA-->
-    </main>
-    <!-- ==========================
-       FINAL - [DO] MAIN
-    ========================== -->
-
+    
     <section class="secao-momentos">
       <h2 class="titulo-galeria">Meus Melhores momentos do Minecraft</h2>
       <p class="subtitulo-galeria">Isso fala bastante sobre mim</p>
@@ -390,6 +417,12 @@
       </div>
     </section>
 
+    </main>
+    <!-- ==========================
+       FINAL - [DO] MAIN
+    ========================== -->
+
+
     <!-- ==========================
        INICIO {DO} FOOTER - RODAPE
     ========================== -->
@@ -407,7 +440,7 @@
         </div>
       </div>
 
-      <!-- Menu de Navegação -->
+      <!-- Menu de Navegação do pé -->
       <nav class="menu-rodape">
         <a href="#inicio">Início</a>
         <a href="#categorias">Categorias</a>
@@ -422,36 +455,10 @@
        FIM{DO} FOOTER - RODAPE
     ========================== -->
 
-    <!-- ==========================
-          MENU HAMBURGUER
-    ========================== -->
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("menu-nav");
-        const btn = document.getElementById("btn-hamburguer");
-        const overlay = document.getElementById("overlay-menu");
+  
 
-        menu.classList.toggle("aberto");
-        btn.classList.toggle("ativo");
-        overlay.classList.toggle("ativo");
-      }
-
-      // Fecha o menu ao clicar em qualquer item
-      document.querySelectorAll("#menu-nav ul li a").forEach((link) => {
-        link.addEventListener("click", () => {
-          const menu = document.getElementById("menu-nav");
-          const btn = document.getElementById("btn-hamburguer");
-          const overlay = document.getElementById("overlay-menu");
-
-          menu.classList.remove("aberto");
-          btn.classList.remove("ativo");
-          overlay.classList.remove("ativo");
-        });
-      });
-    </script>
-
-    <!-- ==========================
-          MENU HAMBURGUER
-    ========================== -->
   </body>
+
+   <script src="js/script.js"></script>
+
 </html>

@@ -34,7 +34,12 @@
         </div>
 
         <!-- BOTÃO HAMBÚRGUER (Aparece em telas menores) -->
-        <button class="btn-hamburguer" id="btn-hamburguer" onclick="toggleMenu()" aria-label="Abrir Menu">
+        <button
+          class="btn-hamburguer"
+          id="btn-hamburguer"
+          onclick="toggleMenu()"
+          aria-label="Abrir Menu"
+        >
           <span class="linha"></span>
           <span class="linha"></span>
           <span class="linha"></span>
@@ -51,134 +56,140 @@
       </nav>
     </header>
 
-    <!-- Overlay escuro para quando o menu mobile estiver aberto -->
+    <!-- menu para celular -->
     <div class="overlay-menu" id="overlay-menu" onclick="toggleMenu()"></div>
 
-  
-
-
-<main class="conteudo-principal">
-
-  <!-- CAIXA ROXA GIGANTE -->
-  <section class="caixa-sobre" id="sobre">
-    <h2>Bem-vindo(a) ao Sobre Mim</h2>
-    <p>
-      Esta é a dimensão do vazio, das cidades flutuantes e dos dragões! É onde ficam as coisas mais malucas que você já viu, exatamente como a minha vida.
-    </p>
-
-    <!-- SHULKER BOX AGORA ESTÁ DENTRO DO QUADRADO ROXO -->
-    <div class="secao-shulker-trigger">
-      <h2>Quem sou eu?</h2>
-      <div class="shulker-item" onclick="abrirShulker()">
-        <div class="caixa-shulker-pixel">
-          <img src="imagem/decorativo/Shullker.png" alt="Shulker Box">
-        </div>
-        <span>Clique Aqui para Abrir</span>
-      </div>
-    </div>
-  </section>
-
-
-  
-  <!-- MODAL INTERATIVO DA SHULKER BOX (GUI) -->
-   <section class="shulker-modal-container" id="shulkerModal">
-    <div class="shulker-gui">
-      
-      <!-- Cabeçalho do Modal -->
-      <div class="gui-header">
-        <span class="gui-title">Shulker Box</span>
-        <button class="gui-close-btn" onclick="fecharShulker()">&times;</button>
-      </div>
-
-      <!-- PARTE SUPERIOR: TEXTO SOBRE MIM -->
-      <div class="shulker-texto-container">
+    <main class="conteudo-principal">
+      <!-- CAIXA ROXA GIGANTE -->
+      <section class="caixa-sobre" id="sobre">
+        <h2>Bem-vindo ao The End!</h2>
+        
+        <p>"Conquista Desbloqueada: O Fim?"</p>
+        <br>
         <p>
-          Sinceramente? Não tenho ideia de quem sou! A cada dia estou descobrindo algo novo. 
-          Às vezes me sinto super feliz, às vezes meio triste, uma verdadeira montanha-russa. 
-          Ainda não sei com o que quero trabalhar, mas de uma coisa tenho certeza sou apaixonada 
-          por esse meio caótico da programação. Combina certinho com os meus neurônios!
+          
+
+
+O The End marca a etapa final do Minecraft. Agora que você chegou até aqui, é hora de zerar o mapa e conhecer quem construiu tudo isso!
         </p>
-      </div>
 
-      <!-- PARTE INFERIOR: INVENTÁRIO COM ITENS ENGRAÇADOS -->
-      <div class="gui-inventory-header">
-        <span class="gui-title">Inventory</span>
-      </div>
+        <!-- SHULKER BOX AGORA ESTÁ DENTRO DO QUADRADO ROXO -->
+        <div class="secao-shulker-trigger">
+          <h2>Quem sou eu?</h2>
+          <div class="shulker-item" onclick="abrirShulker()">
+            <div class="caixa-shulker-pixel">
+              <img src="imagem/decorativo/Shullker.png" alt="Shulker Box" />
+            </div>
+            <span>Clique Aqui para Abrir</span>
+          </div>
+        </div>
+      </section>
 
-      <div class="inventory-grid">
-        <!-- Linha de Slots do Inventário -->
-        
+      <!-- MODAL INTERATIVO DA SHULKER BOX (GUI) -->
+      <section class="shulker-modal-container" id="shulkerModal">
+        <div class="shulker-gui">
+          <!-- Cabeçalho do Modal -->
+          <div class="gui-header">
+            <span class="gui-title">Shulker Box</span>
+            <button class="gui-close-btn" onclick="fecharShulker()">
+              &times;
+            </button>
+          </div>
 
-        <!-- Grade de slots vazios para preencher como no jogo -->
-    
-         
-        
-        <div class="slot" data-tooltip="Meu Perfil do GitHub">
-          <a href="https://github.com/KaahBri" target="_blank" class="item-slot">
+          <!-- PARTE SUPERIOR: TEXTO SOBRE MIM -->
+          <div class="shulker-texto-container">
+            <p> Oioi! Sou a Kassya, tenho 19 anos.</p>
+
+<p> Criei este site sobre o jogo que marcou minha infância e esteve comigo nos melhores e piores momentos.
+</p>
+<p> Entrei na programação para ser igual ao meu primo e ter coisas caras, mas vi que ela me levaria ao meu verdadeiro sonho: ser Game Developer.</p>
+
+<P> Jogar é o que mais amo fazer e quero transformar isso em algo que me dê dinheiro. Ainda tenho muito a aprender, mas um dia vou criar jogos que façam parte da vida de outras pessoas, assim como este fez parte da minha.</P>
+          </div>
+
+          <!-- PARTE INFERIOR: INVENTÁRIO COM ITENS ENGRAÇADOS -->
+          <div class="gui-inventory-header">
+            <span class="gui-title">Inventory</span>
+          </div>
+
+          <div class="inventory-grid">
+            <!-- Linha de Slots do Inventário -->
+
+            <!-- Grade de slots vazios para preencher como no jogo -->
+
+           <div class="slot" data-tooltip="Meu Perfil do GitHub">
+            <a href="https://github.com/KaahBri" target="_blank" class="item-slot">
               <img src="imagem/decorativo/Github.png" alt="GitHub" class="slot-icon">
             </a>
-        </div><div class="slot"></div><div class="slot"></div>
-        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
-        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
-        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
-        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
-        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
-        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
-        <div class="slot"></div><div class="slot"></div><div class="slot"></div>
-        <div class="slot"></div><div class="slot"></div>  <div class="slot"></div>
-        
-      </div>
+           </div><div class="slot"></div><div class="slot"></div>
+           <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+           <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+           <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+           <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+           <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+           <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+           <div class="slot"></div><div class="slot"></div><div class="slot"></div>
+           <div class="slot"></div><div class="slot"></div>  <div class="slot"></div>
 
-    </div>
-  </section>
-  
 
-    
-   <!-- ==========================
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================
        INICIO - [DE] CATEGORIAS
     ========================== -->
-    
-        <section class="categorias" id="categorias">
-        <!-- SEÇÃO DE coisas -->
+
+      <section class="categorias" id="categorias">
+        <!-- SEÇÃO DE COISAS QUE EU GOSTO -->
         <h2>Coisas que eu gosto</h2>
         <div class="Quadrado-de-fora">
           <div class="categoria-item">
             <h3>Filmes & Séries</h3>
-            <p>Para maratonar até a madrugada.</p>
+            <p>
+              Baixei o Letterboxd uma semana dessas aí... achei bem legal!
+              Conheço menos filmes e séries do que eu gostaria.
+            </p>
           </div>
           <div class="categoria-item">
             <h3>Músicas</h3>
-            <p>Não garanto que são boas, mas eu gosto.</p>
+            <p>
+              Sou bastante eclética, mas no momento, nos meus belos ouvidos, as
+              músicas mais tocadas são reggaeton.
+            </p>
           </div>
           <div class="categoria-item">
             <h3>Jogos</h3>
-            <p>Não conheço muitos, mas me divirto.</p>
+            <p>
+              Todo tipo de jogo de história eu estarei lá! Não garanto que vou
+              zerar todos, mas estarei lá.
+            </p>
           </div>
           <div class="categoria-item">
             <h3>Animais</h3>
-            <p>Bichinhos fofos deixam o dia melhor.</p>
+            <p>Animais são melhores que humanos, apenas fatos. Estou errada?</p>
           </div>
           <div class="categoria-item">
             <h3>Comidas</h3>
-            <p>Porque comer bem é uma arte.</p>
+            <p>
+              Se comer tudo o que quero sem passar mal fosse um superpoder, eu
+              com certeza gostaria de ter.
+            </p>
           </div>
           <div class="categoria-item">
             <h3>Flores & Plantas</h3>
-            <p>Um pouco de verde pra relaxar.</p>
+            <p>
+              Sempre sonhei em ter um jardim, mas nunca fui muito paciente para
+              cuidar... Dizem que é relaxante!
+            </p>
           </div>
         </div>
       </section>
-    <!-- ==========================
+      <!-- ==========================
        FINAL - [DE] CATEGORIAS
-    ========================== -->    
-  
-  
-
-  
-
-</main>
-
-
+    ========================== -->
+    </main>
 
     <!-- ==========================
         RODAPÉ
@@ -193,8 +204,6 @@
           </div>
         </div>
 
-       
-
         <!-- Menu de Navegação -->
         <nav class="menu-rodape">
           <a href="index.html#inicio">Início</a>
@@ -204,46 +213,13 @@
         </nav>
 
         <!-- Direitos Autorais -->
-        <p class="direitos">
-          Todos os direitos reservados 2026 &copy;
-        </p>
+        <p class="direitos">Todos os direitos reservados 2026 &copy;</p>
       </div>
     </footer>
 
-    <!-- LÓGICA DO MENU HAMBÚRGUER -->
 
-    
- <script>
-      function toggleMenu() {
-        const menu = document.getElementById('menu-nav');
-        const btn = document.getElementById('btn-hamburguer');
-        const overlay = document.getElementById('overlay-menu');
-
-        menu.classList.toggle('aberto');
-        btn.classList.toggle('ativo');
-        overlay.classList.toggle('ativo');
-      }
-    </script>
-
-    
-<!-- JAVASCRIPT PARA ABRIR E FECHAR O MODAL -->
-<script>
-  function abrirShulker() {
-    document.getElementById('shulkerModal').classList.add('ativo');
-  }
-
-  function fecharShulker() {
-    document.getElementById('shulkerModal').classList.remove('ativo');
-  }
-
-  // Fechar ao clicar fora da janela da Shulker
-  window.onclick = function(event) {
-    const modal = document.getElementById('shulkerModal');
-    if (event.target === modal) {
-      fecharShulker();
-    }
-  }
-</script>
-   
   </body>
+  <script src="js/script.js"></script>
+  <script src="js/sobre.js"></script>
+
 </html>
